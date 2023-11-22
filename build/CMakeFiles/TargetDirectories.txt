@@ -1,3 +1,0 @@
-/home/saims_no/projects/test/build/CMakeFiles/CurveLibrary.dir
-/home/saims_no/projects/test/build/CMakeFiles/edit_cache.dir
-/home/saims_no/projects/test/build/CMakeFiles/rebuild_cache.dir
