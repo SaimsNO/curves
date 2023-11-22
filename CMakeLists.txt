@@ -15,7 +15,13 @@ add_executable(${PROJECT_NAME} ${SOURCES})
 find_library(CurveLibrary CurveLibrary PATHS ${CMAKE_CURRENT_SOURCE_DIR}/library/build)
 
 if (CurveLibrary)
-    message(${MY_LIBRARY})
+    message("PATH")
+    message(${CurveLibrary})
     target_link_libraries(${PROJECT_NAME} PRIVATE ${CurveLibrary})
+    target_include_directories(${PROJECT_NAME} PRIVATE
+        ${CMAKE_CURRENT_SOURCE_DIR}/library/include
+    )
+else()
+    message(FATAL_ERROR "CurveLibrary not found!")
 endif()
 

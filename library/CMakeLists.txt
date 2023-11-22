@@ -3,18 +3,18 @@ project(CurveLibrary VERSION 0.1.0 LANGUAGES C CXX)
 
 
 set (SOURCES 
-    src/point3D.cpp
-    src/ellipse.cpp
-    src/circle.cpp
-    src/helix.cpp
+    include/point3D.cpp
+    include/ellipse.cpp
+    include/circle.cpp
+    include/helix.cpp
 )
 set (HEADERS
-    src/point3D.h
-    src/vector3D.h
-    src/curve.h
-    src/ellipse.h
-    src/circle.h
-    src/helix.h
+    include/point3D.h
+    include/vector3D.h
+    include/curve.h
+    include/ellipse.h
+    include/circle.h
+    include/helix.h
 )
 
 set(CMAKE_CXX_STANDARD 17) 
@@ -22,5 +22,5 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_library(${PROJECT_NAME} SHARED ${SOURCES} ${HEADERS})
 
-target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
 
