@@ -1,0 +1,1 @@
+/usr/bin/g++ -fPIC -g -shared -Wl,-soname,libCurveLibrary.so -o libCurveLibrary.so CMakeFiles/CurveLibrary.dir/src/point3D.cpp.o CMakeFiles/CurveLibrary.dir/src/ellipse.cpp.o CMakeFiles/CurveLibrary.dir/src/circle.cpp.o CMakeFiles/CurveLibrary.dir/src/helix.cpp.o 

@@ -1,3 +1,5 @@
+#pragma once
+
 #include "curve.h"
 
 class Helix: public Curve{
