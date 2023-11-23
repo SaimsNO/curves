@@ -17,8 +17,8 @@ find_library(CurveLibrary CurveLibrary PATHS ${CMAKE_CURRENT_SOURCE_DIR}/library
 if (CurveLibrary)
     message("PATH")
     message(${CurveLibrary})
-    target_link_libraries(${PROJECT_NAME} PRIVATE ${CurveLibrary})
-    target_include_directories(${PROJECT_NAME} PRIVATE
+    target_link_libraries(${PROJECT_NAME} ${CurveLibrary})
+    target_include_directories(${PROJECT_NAME} PUBLIC
         ${CMAKE_CURRENT_SOURCE_DIR}/library/include
     )
 else()

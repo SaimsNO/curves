@@ -45,8 +45,8 @@ int main(){
 
     //Print coordinates of points and derivatives of all curves in the container at t=PI/4.
     for (const auto& curve : curves) {
-        auto point = curve->getPoint(M_PI / 4);
-        auto derivative = curve->getDerivative(M_PI / 4);
+        auto point = curve->getPoint(pi / 4);
+        auto derivative = curve->getDerivative(pi / 4);
         std::cout << "Point: ("; 
         point.print();
         std::cout << "), Derivative: (";

@@ -3,10 +3,10 @@ project(CurveLibrary VERSION 0.1.0 LANGUAGES C CXX)
 
 
 set (SOURCES 
-    include/point3D.cpp
-    include/ellipse.cpp
-    include/circle.cpp
-    include/helix.cpp
+    src/point3D.cpp
+    src/ellipse.cpp
+    src/circle.cpp
+    src/helix.cpp
 )
 set (HEADERS
     include/point3D.h
