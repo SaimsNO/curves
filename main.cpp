@@ -2,13 +2,13 @@
 #include <vector>
 #include <memory>
 #include <random>
-
+#include <Windows.h>
 
 #include "circle.h"
 #include "ellipse.h"
 #include "helix.h"
 
-std::unique_ptr<Curve> createRandomCurve() {
+std::unique_ptr<Curves::Curve> createRandomCurve() {
     std::random_device rd;
     std::mt19937 gen(rd());
     std::uniform_real_distribution<double> distRadius(1.0, 10.0);
@@ -22,19 +22,18 @@ std::unique_ptr<Curve> createRandomCurve() {
     int curveType = distCurveType(gen);
     switch (curveType) {
         case 0:
-            return std::make_unique<Circle>(radius);
+            return std::make_unique<Curves::Circle>(radius);
         case 1:
-            return std::make_unique<Ellipse>(radius, radiusEllipse);
+            return std::make_unique<Curves::Ellipse>(radius, radiusEllipse);
         case 2:
-            return std::make_unique<Helix>(radius, step);
+            return std::make_unique<Curves::Helix>(radius, step);
         default:
             return nullptr;
     }
 }
 
 int main(){
-
-    std::vector<std::shared_ptr<Curve>> curves;
+    std::vector<std::shared_ptr<Curves::Curve>> curves;
     
     //Populate a container (e.g. vector or list) of objects of these types created in random manner with
     //random parameters.
@@ -55,9 +54,9 @@ int main(){
     }
 
     //Populate a second container that would contain only circles from the first container.
-    std::vector<std::shared_ptr<Circle>>circles;
+    std::vector<std::shared_ptr<Curves::Circle>>circles;
     for (const auto& curve : curves){
-        if (auto circle = std::dynamic_pointer_cast<Circle>(curve)) {
+        if (auto circle = std::dynamic_pointer_cast<Curves::Circle>(curve)) {
             circles.push_back(circle);
         }
     }
@@ -74,5 +73,7 @@ int main(){
         totalSum += circle->getRadius();
     }
     std::cout << totalSum;
+
+    system("pause");
     return 0;
 }

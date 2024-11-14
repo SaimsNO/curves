@@ -1,5 +1,7 @@
 #include "circle.h"
 
+using namespace Curves;
+
 Circle::Circle(double radius): radius{std::max(0.0, radius)}
 {
 }

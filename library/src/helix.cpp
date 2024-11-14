@@ -1,5 +1,7 @@
 #include "helix.h"
 
+using namespace Curves;
+
 Helix::Helix(double radius, double step): radius{radius}, step{step}
 {
 }

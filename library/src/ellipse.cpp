@@ -1,5 +1,7 @@
 #include "ellipse.h"
 
+using namespace Curves;
+
 Ellipse::Ellipse(double radiusX, double radiusY): 
     radiusX{std::max(0.0, radiusX)}, 
     radiusY{std::max(0.0, radiusY)}
